@@ -106,6 +106,10 @@ The smoke runner builds the solution, starts the API on a throwaway SQLite file,
 flow and prints one line per check. Its failing checks are a second, more readable view of the
 same three requirements. Add your own checks or tests if you want to pin something down.
 
+Your pull request runs `dotnet test` on GitHub Actions as well, so the same result is visible
+there. The workflow also fails if anything under `tests/` was edited – that is not a trick, it is
+the rule from below, and it keeps the comparison fair.
+
 ## Ground rules
 
 - Do not change or delete the tests, and do not weaken them. If you think a test is wrong, leave

@@ -1,0 +1,34 @@
+name: Tests
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - uses: actions/setup-dotnet@v4
+        with:
+          dotnet-version: '10.0.x'
+
+      # The suite is the specification. Weakening it to make the build green would
+      # leave us without an answer, so the check fails instead.
+      - name: The test suite must stay untouched
+        if: github.event_name == 'pull_request'
+        run: |
+          if ! git diff --quiet "${{ github.event.pull_request.base.sha }}" -- tests/; then
+            echo "::error::The tests under tests/ were changed. They describe what is expected - please leave them as they are and explain your reasoning in the pull request instead."
+            exit 1
+          fi
+
+      - name: Run the tests
+        run: dotnet test FlightReservation.sln --nologo
