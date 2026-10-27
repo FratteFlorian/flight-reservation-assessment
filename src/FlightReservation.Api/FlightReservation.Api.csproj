@@ -1,0 +1,6 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+  <ItemGroup>
+    <ProjectReference Include="..\FlightReservation.Data\FlightReservation.Data.csproj" />
+    <ProjectReference Include="..\FlightReservation.Domain\FlightReservation.Domain.csproj" />
+  </ItemGroup>
+</Project>

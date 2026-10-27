@@ -1,0 +1,14 @@
+# Build output
+[Bb]in/
+[Oo]bj/
+TestResults/
+
+# Local database files
+*.db
+*.db-shm
+*.db-wal
+
+# IDE
+.vs/
+.idea/
+*.user
