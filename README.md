@@ -4,7 +4,7 @@ A small booking API: flights, seats, reservations. It is a self-contained .NET 1
 SQLite application – no Docker, no database server, no frontend. A database file is created next
 to the API on first start.
 
-**Time budget:** about one hour, paid at your usual rate. Please stop when the hour is up – a
+**Time budget:** about one hour. Please stop when the hour is up – a
 half-finished solution is just as useful to us as a finished one, and the note counts as much as
 the code.
 
