@@ -124,10 +124,12 @@ same three requirements. Add your own checks or tests if you want to pin somethi
 
 ## How to hand it in
 
-Fork this repository and open a **pull request** against `main`:
+Fork this repository on GitHub
+(https://github.com/FratteFlorian/flight-reservation-assessment) and open a **pull request**
+against `main`:
 
 ```bash
-git clone <the URL of this repository>
+git clone https://github.com/<your-github-user>/flight-reservation-assessment.git
 cd flight-reservation-assessment
 git switch -c booking-capacity
 # work, commit in small steps
